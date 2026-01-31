@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Topic | Alexandre Math Hub</title>
+  <meta name="description" content="Topic page" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-topic-slug="partials">
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html#library" aria-label="Alexandre Math Hub home" data-i18n-aria="brand.aria">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Alexandre Math Hub</span>
+          <span class="brand__domain" data-i18n="brand.tagline">Free notes • Practice • Exam packs</span>
+        </span>
+      </a>
+
+      <div class="topic-actions">
+        <a class="btn btn--ghost btn--sm" href="../index.html#library" data-i18n="topic.back">← Back to library</a>
+        <button class="btn btn--ghost btn--sm lang" id="langToggle" type="button" aria-label="Switch language">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="topic-shell">
+    <div class="container">
+      <div class="topic-hero">
+        <h1 id="topicPageTitle">Topic</h1>
+        <p class="lead" id="topicPageDesc">Description</p>
+        <div class="topic-hero__meta" id="topicPageMeta"></div>
+      </div>
+
+      <div class="topic-layout">
+        <div>
+          <section class="topic-box" id="overview">
+            <h2 data-i18n="topic.section.overview">Overview</h2>
+            <h3 id="topicComingTitle">Content coming soon</h3>
+            <p class="muted" id="topicComingText">This page will include...</p>
+            <a class="btn btn--ghost" href="../index.html#contact" data-i18n="topic.request">Request content for this topic</a>
+          </section>
+
+          <section class="topic-box" id="examples">
+            <h2 data-i18n="topic.section.examples">Examples</h2>
+            <p class="muted" data-i18n="topic.placeholder.examples">Worked examples will appear here (step-by-step).</p>
+          </section>
+
+          <section class="topic-box" id="practice">
+            <h2 data-i18n="topic.section.practice">Practice</h2>
+            <p class="muted" data-i18n="topic.placeholder.practice">Practice questions (easy → hard) + solutions toggles will appear here.</p>
+          </section>
+        </div>
+
+        <aside class="topic-box" aria-label="On this page">
+          <h2 data-i18n="topic.section.onThisPage">On this page</h2>
+          <div class="toc">
+            <a href="#overview" data-i18n="topic.toc.overview">Overview</a>
+            <a href="#examples" data-i18n="topic.toc.examples">Examples</a>
+            <a href="#practice" data-i18n="topic.toc.practice">Practice</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand" data-i18n="footer.brand">Alexandre Math Hub</div>
+        <div class="muted small" data-i18n="footer.copyright">© <span id="year"></span> — Free learning resources.</div>
+      </div>
+      <div class="footer__right">
+        <a href="#top" data-i18n="footer.top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
