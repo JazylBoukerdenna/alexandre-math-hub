@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="meta.title">Alexandre Math Hub | Free Calculus Notes & Practice</title>
+  <meta name="description"
+        content="Free explanations and exam-style practice for CEGEP & university math: Differential, Integral, and Vector Calculus. Optional tutoring available."
+        data-i18n-content="meta.description" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top notice -->
+  <div class="topbar" role="note" aria-label="Site notice" data-i18n-aria="topbar.aria">
+    <div class="container topbar__inner">
+      <span data-i18n="topbar.text">Free notes + exam practice added regularly.</span>
+      <a class="topbar__link" href="#library" data-i18n="topbar.link">Browse the library</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Alexandre Math Hub home" data-i18n-aria="brand.aria">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Alexandre Math Hub</span>
+          <span class="brand__domain" data-i18n="brand.tagline">Free notes • Practice • Exam packs</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation" data-i18n-aria="nav.aria">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only" data-i18n="nav.openMenu">Open menu</span>
+          <span aria-hidden="true">☰</span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#library" data-i18n="nav.courses">Courses</a></li>
+          <li><a href="#exam-review" data-i18n="nav.examReview">Exam review</a></li>
+          <li><a href="#resources" data-i18n="nav.cheatsheets">Cheatsheets</a></li>
+          <li><a href="#tutoring" data-i18n="nav.tutoring">Tutoring</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a class="btn btn--sm" href="#contact" data-i18n="nav.ask">Ask a question</a></li>
+          <li>
+            <button class="btn btn--ghost btn--sm lang" id="langToggle" type="button" aria-label="Switch language">
+              FR
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1 data-i18n="hero.h1">Free calculus explanations + exam-style practice.</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Clear, step-by-step help for <strong>CEGEP</strong> and <strong>university</strong> math:
+            <strong>Differential</strong>, <strong>Integral</strong>, and <strong>Vector Calculus</strong>.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#library" data-i18n="hero.ctaBrowse">Browse courses</a>
+            <a class="btn btn--ghost" href="#exam-review" data-i18n="hero.ctaExam">Try an exam pack</a>
+            <a class="btn btn--ghost" href="#tutoring" aria-label="Optional tutoring" data-i18n="hero.ctaTutoring" data-i18n-aria="hero.ctaTutoringAria">Need 1-on-1?</a>
+          </div>
+
+          <div class="hero__trust">
+            <div class="trust__item">
+              <div class="trust__title" data-i18n="trust.simpleTitle">Simple</div>
+              <div class="trust__text" data-i18n="trust.simpleText">Concept → example → practice</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__title" data-i18n="trust.examTitle">Exam-focused</div>
+              <div class="trust__text" data-i18n="trust.examText">Common patterns + time savers</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__title" data-i18n="trust.structuredTitle">Structured</div>
+              <div class="trust__text" data-i18n="trust.structuredText">Same format on every topic</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__card" aria-label="Quick start" data-i18n-aria="quickstart.aria">
+          <div class="card">
+            <h2 class="card__title" data-i18n="quickstart.title">Start here</h2>
+            <ul class="checklist">
+              <li data-i18n="quickstart.step1">Pick a topic from the library</li>
+              <li data-i18n="quickstart.step2">Read the 2-minute explanation</li>
+              <li data-i18n="quickstart.step3">Do 5–10 practice questions</li>
+              <li data-i18n="quickstart.step4">Check solutions (optional)</li>
+              <li data-i18n="quickstart.step5">Try a timed mini-exam</li>
+            </ul>
+
+            <div class="card__meta">
+              <div class="pill" data-i18n="pill.differential">Differential</div>
+              <div class="pill" data-i18n="pill.integral">Integral</div>
+              <div class="pill" data-i18n="pill.vector">Vector</div>
+              <div class="pill" data-i18n="pill.langs">English / French</div>
+            </div>
+
+            <a class="btn btn--full" href="#library" data-i18n="quickstart.openLibrary">Open the library</a>
+            <p class="muted small" data-i18n="quickstart.tip">Tip: use the search to find your exact chapter fast.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Library -->
+    <section class="section" id="library">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="library.title">Course library</h2>
+          <p class="muted" data-i18n="library.subtitle">Search topics, then open a page with explanation + examples + practice.</p>
+        </div>
+
+        <!-- Popular topics -->
+        <div class="popular">
+          <div class="popular__head">
+            <h3 class="popular__title" data-i18n="library.popularTitle">Popular topics</h3>
+            <p class="muted small" data-i18n="library.popularSubtitle">Quick access to the most-used chapters.</p>
+          </div>
+          <div class="popular__row" id="popularRow" aria-label="Popular topics"></div>
+        </div>
+
+        <div class="filterbar" role="search">
+          <label class="search">
+            <span class="sr-only" data-i18n="library.searchLabel">Search topics</span>
+            <input id="topicSearch" type="search" data-i18n-placeholder="library.searchPlaceholder"
+                   placeholder="Search a topic (e.g., substitution, optimization, partial derivatives…)" />
+          </label>
+
+          <div class="filters" aria-label="Topic filters" data-i18n-aria="library.filtersAria">
+            <button class="chip is-active" data-filter="all" type="button" data-i18n="filter.all">All</button>
+            <button class="chip" data-filter="differential" type="button" data-i18n="filter.differential">Differential</button>
+            <button class="chip" data-filter="integral" type="button" data-i18n="filter.integral">Integral</button>
+            <button class="chip" data-filter="vector" type="button" data-i18n="filter.vector">Vector</button>
+          </div>
+        </div>
+
+        <div class="grid grid--3" id="topicGrid" aria-label="Topic cards" data-i18n-aria="library.cardsAria"></div>
+
+        <div class="callout">
+          <div>
+            <h3 class="callout__title" data-i18n="callout.title">Want a topic added?</h3>
+            <p class="muted" data-i18n="callout.text">Send your chapter title or a screenshot of the homework and I’ll add a matching practice set.</p>
+          </div>
+          <a class="btn btn--ghost" href="#contact" data-i18n="callout.button">Request a topic</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam review -->
+    <section class="section section--alt" id="exam-review">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="exams.title">Exam review packs</h2>
+          <p class="muted" data-i18n="exams.subtitle">Timed sets you can do in 30–90 minutes. (Add PDFs/links as you publish them.)</p>
+        </div>
+
+        <div class="grid grid--3" id="examGrid" aria-label="Exam pack cards" data-i18n-aria="exams.cardsAria"></div>
+
+        <p class="small muted" data-i18n="exams.comingSoon">
+          Coming soon: “Generate a custom exam” by selecting topics + difficulty.
+        </p>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="resources.title">Cheatsheets & tools</h2>
+          <p class="muted" data-i18n="resources.subtitle">Fast references: formulas, method maps, and common mistakes.</p>
+        </div>
+
+        <div class="grid grid--3" id="resourceGrid" aria-label="Resource cards" data-i18n-aria="resources.cardsAria"></div>
+      </div>
+    </section>
+
+    <!-- Tutoring -->
+    <section class="section section--alt" id="tutoring">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="tutoring.title">Optional tutoring</h2>
+          <p class="muted" data-i18n="tutoring.subtitle">If you want 1-on-1 help, here are simple options. The site stays free.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="price">
+            <h3 data-i18n="tutoring.singleTitle">Single Session</h3>
+            <p class="price__tag"><span class="price__amount">$60</span><span class="price__unit" data-i18n="tutoring.perHour">/ 60 min</span></p>
+            <ul class="checklist">
+              <li data-i18n="tutoring.single1">Homework help or topic review</li>
+              <li data-i18n="tutoring.single2">Shared notes + recap</li>
+              <li data-i18n="tutoring.single3">Online or in-person</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#contact" data-i18n="tutoring.singleBtn">Ask about a session</a>
+          </article>
+
+          <article class="price price--featured" aria-label="Most popular plan" data-i18n-aria="tutoring.popularAria">
+            <div class="badge" data-i18n="tutoring.popularBadge">Most Popular</div>
+            <h3 data-i18n="tutoring.weeklyTitle">Weekly Plan</h3>
+            <p class="price__tag"><span class="price__amount">$220</span><span class="price__unit" data-i18n="tutoring.per4">/ 4 sessions</span></p>
+            <ul class="checklist">
+              <li data-i18n="tutoring.weekly1">Weekly structure + accountability</li>
+              <li data-i18n="tutoring.weekly2">Practice sets (optional)</li>
+              <li data-i18n="tutoring.weekly3">Exam pacing + strategy</li>
+            </ul>
+            <a class="btn btn--full" href="#contact" data-i18n="tutoring.weeklyBtn">Ask about weekly</a>
+          </article>
+
+          <article class="price">
+            <h3 data-i18n="tutoring.examTitle">Exam Prep</h3>
+            <p class="price__tag"><span class="price__amount">$180</span><span class="price__unit" data-i18n="tutoring.per3h">/ 3 hours</span></p>
+            <ul class="checklist">
+              <li data-i18n="tutoring.exam1">Focus on what will be tested</li>
+              <li data-i18n="tutoring.exam2">Timed drills + corrections</li>
+              <li data-i18n="tutoring.exam3">Personal “what to memorize” sheet</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#contact" data-i18n="tutoring.examBtn">Ask about exam prep</a>
+          </article>
+        </div>
+
+        <p class="small muted" data-i18n="tutoring.note">
+          Replace prices with your real rates (or hide this whole section if you want 100% free).
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="faq.title">FAQ</h2>
+          <p class="muted" data-i18n="faq.subtitle">Quick answers.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Is everything on this site free?</summary>
+            <p data-i18n="faq.a1">Yes. Notes, explanations, practice questions, and exam packs are free. Tutoring is optional.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Can I request a specific chapter/topic?</summary>
+            <p data-i18n="faq.a2">Yes—send the topic name (or a screenshot of your homework). I’ll try to add it to the library.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Do you post solutions?</summary>
+            <p data-i18n="faq.a3">Some pages include full solutions; others have answers first with “show solution” steps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Do you tutor online?</summary>
+            <p data-i18n="faq.a4">Yes. Online sessions use a shared whiteboard and work well for most calculus courses.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="contact.title">Ask a question / Contact</h2>
+          <p class="muted" data-i18n="contact.subtitle">Request a topic, report an error, or ask about tutoring. I’ll reply quickly.</p>
+        </div>
+
+        <div class="contact">
+          <form class="form" id="contactForm">
+            <div class="form__row">
+              <label>
+                <span data-i18n="contact.name">Name</span>
+                <input name="name" autocomplete="name" required data-i18n-placeholder="contact.namePh" placeholder="Your name" />
+              </label>
+              <label>
+                <span data-i18n="contact.email">Email</span>
+                <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="contact.emailPh" placeholder="you@email.com" />
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label>
+                <span data-i18n="contact.about">What is this about?</span>
+                <select name="purpose">
+                  <option data-i18n="contact.opt1">Request a topic / practice set</option>
+                  <option data-i18n="contact.opt2">Question about a solution</option>
+                  <option data-i18n="contact.opt3">Report an error</option>
+                  <option data-i18n="contact.opt4">Tutoring inquiry</option>
+                  <option data-i18n="contact.opt5">Other</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="contact.courseTopic">Course / Topic</span>
+                <input name="topic" required data-i18n-placeholder="contact.topicPh" placeholder="e.g., Calculus I — optimization" />
+              </label>
+            </div>
+
+            <label>
+              <span data-i18n="contact.message">Message</span>
+              <textarea name="message" rows="6" required data-i18n-placeholder="contact.msgPh"
+                        placeholder="Paste the question, chapter title, or what you’re stuck on. Include your exam date if you have one."></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="btn" type="submit" data-i18n="contact.send">Send</button>
+              <p class="muted small" data-i18n="contact.formNote">
+                This demo form shows a success message. For real emails, connect it to Formspree / Netlify Forms / your backend.
+              </p>
+            </div>
+
+            <div class="form__notice" id="formNotice" aria-live="polite"></div>
+          </form>
+
+          <aside class="contact__side">
+            <div class="card">
+              <h3 class="card__title" data-i18n="contact.whatIPost">What I post</h3>
+              <ul class="bullets">
+                <li data-i18n="contact.post1">Short explanations in simple words</li>
+                <li data-i18n="contact.post2">Exam-style questions (easy → hard)</li>
+                <li data-i18n="contact.post3">Common mistakes + quick checks</li>
+              </ul>
+              <div class="divider"></div>
+              <h3 class="card__title" data-i18n="contact.emailTitle">Email</h3>
+              <p class="muted">
+                <a href="mailto:hello@alexandremathhub.com">hello@alexandremathhub.com</a>
+              </p>
+              <p class="small muted" data-i18n="contact.replaceEmail">Replace with your real email.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand" data-i18n="footer.brand">Alexandre Math Hub</div>
+        <div class="small muted" data-i18n="footer.copyright">© <span id="year"></span> — Free learning resources.</div>
+      </div>
+      <div class="footer__links">
+        <a href="#library" data-i18n="footer.courses">Courses</a>
+        <a href="#exam-review" data-i18n="footer.exams">Exam review</a>
+        <a href="#resources" data-i18n="footer.resources">Cheatsheets</a>
+        <a href="#tutoring" data-i18n="footer.tutoring">Tutoring</a>
+        <a href="#contact" data-i18n="footer.contact">Contact</a>
+        <a href="#top" class="to-top" data-i18n="footer.top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz | Alexandre Math Hub</title>
+  <meta name="description" content="Differential calculus quizzes (easy to very hard)" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+
+<body data-page="quiz">
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html#top" aria-label="Alexandre Math Hub home" data-i18n-aria="brand.aria">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Alexandre Math Hub</span>
+          <span class="brand__domain" data-i18n="brand.tagline">Free notes • Practice • Exam packs</span>
+        </span>
+      </a>
+
+      <div class="topic-actions">
+        <a class="btn btn--ghost btn--sm" href="./index.html#exam-review" data-i18n="quiz.back">← Back to exam review</a>
+        <button class="btn btn--ghost btn--sm lang" id="langToggle" type="button" aria-label="Switch language">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="topic-shell">
+    <div class="container">
+      <div class="topic-hero">
+        <h1 id="quizPageTitle" data-i18n="quiz.title">Differential Calculus Quizzes</h1>
+        <p class="lead" id="quizPageDesc" data-i18n="quiz.subtitle">
+          Choose a level. Get instant correction + explanations.
+        </p>
+        <div class="topic-hero__meta" id="quizPageMeta"></div>
+      </div>
+
+      <div class="topic-layout">
+        <div>
+          <section class="topic-box">
+            <h2 data-i18n="quiz.pickLevel">Pick a level</h2>
+
+            <div class="quiz-levels">
+              <button class="chip quiz-level is-active" type="button" data-quiz-set="diff-easy" data-i18n="quiz.easy">Easy</button>
+              <button class="chip quiz-level" type="button" data-quiz-set="diff-hard" data-i18n="quiz.hard">Hard</button>
+              <button class="chip quiz-level" type="button" data-quiz-set="diff-vhard" data-i18n="quiz.veryHard">Very hard</button>
+            </div>
+
+            <div class="quiz-bar">
+              <div class="quiz-bar__left">
+                <span class="pill" id="quizSetPill">Differential</span>
+                <span class="pill" id="quizCountPill">10 questions</span>
+                <span class="pill" id="quizBestPill">Best: —</span>
+              </div>
+              <div class="quiz-bar__right">
+                <button class="btn btn--ghost btn--sm" id="quizResetBtn" type="button" data-i18n="quiz.reset">Reset</button>
+              </div>
+            </div>
+
+            <div id="quizMount"></div>
+
+            <div class="quiz-actions">
+              <button class="btn" id="quizSubmitBtn" type="button" data-i18n="quiz.submit">Submit</button>
+              <button class="btn btn--ghost" id="quizRetryBtn" type="button" data-i18n="quiz.retry" style="display:none;">Retry</button>
+            </div>
+
+            <div class="form__notice" id="quizNotice" aria-live="polite"></div>
+          </section>
+
+          <section class="topic-box">
+            <h2 data-i18n="quiz.whatToDo">What to do after</h2>
+            <ul class="bullets">
+              <li data-i18n="quiz.after1">Redo the ones you missed WITHOUT looking.</li>
+              <li data-i18n="quiz.after2">Then do 5 mixed practice questions from the library.</li>
+              <li data-i18n="quiz.after3">Aim for 80%+ before your midterm.</li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="topic-side">
+          <div class="topic-side__box">
+            <h3 data-i18n="quiz.tipTitle">Tip</h3>
+            <p class="muted" data-i18n="quiz.tipText">Hard mode is designed to feel like a real exam.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand" data-i18n="footer.brand">Alexandre Math Hub</div>
+        <div class="small muted" data-i18n="footer.copyright">© <span id="year"></span> — Free learning resources.</div>
+      </div>
+      <div class="footer__links">
+        <a href="./index.html#library" data-i18n="footer.courses">Courses</a>
+        <a href="./index.html#exam-review" data-i18n="footer.exams">Exam review</a>
+        <a href="./index.html#resources" data-i18n="footer.resources">Cheatsheets</a>
+        <a href="./index.html#contact" data-i18n="footer.contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
